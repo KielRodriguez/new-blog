@@ -1,15 +1,19 @@
-<h1>New Article</h1>
+<h1 class="text-center">Nuevo articulo</h1>
 
-<%= form_for :article, url: articles_path do |f| %>
-    <div class="form-group">
-        <%= f.label :title %><br>
-        <%= f.text_field :title, class:'form-control' %><br>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-md-offset-3">
+        <%= form_for :article, url: articles_path do |f| %>
+            <div class="form-group">
+                <%= f.label :title, "Titulo" %><br>
+                <%= f.text_field :title, class:'form-control', rows: 20 %><br>
+            </div>
+            <div class="form-group">
+                <%= f.label :text, "Contenido" %><br>
+                <%= f.text_area :text, class:'form-control', id:"article-text"%><br>
+            </div>
+            <p>
+                <%= f.submit "Gurdar articulo", class: 'btn btn-primary' %>
+            </p>
+        <% end %>
     </div>
-    <div class="form-group">
-        <%= f.label :text %><br>
-        <%= f.text_area :text, class:'form-control' %><br>
-    </div>
-    <p>
-        <%= f.submit class: 'btn btn-primary' %>
-    </p>
-<% end %>
+</div>
