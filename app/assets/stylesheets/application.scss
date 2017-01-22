@@ -1,6 +1,16 @@
+/*
+  #35325F azul marino
+  #F3EEEA gris
+  #9CD7D9 azul claro
+  #A4AFAF azul grisaceo
+  #A4AFAF gris oscuro
+*/
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+.btn {
+  background-color: #9cd7d9;
+}
 #card-article{
   border: 2px solid #f5f5f5;
   border-radius: 10px;
