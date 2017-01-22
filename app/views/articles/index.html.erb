@@ -2,6 +2,7 @@
 
 <div class="row">
     <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <h1 class="text-center">Todos los articulos</h1>
         <div class="row">
             <% @articles.each do |article| %>
                 <div id="card-article" class="col-sm-12 col-md-5" >
@@ -10,6 +11,9 @@
                     </header>
                     <p>
                         <%= article.text.capitalize %>
+                    </p>
+                    <p class="text-right">
+                        <%= link_to "Ver más", article_path(article) %>
                     </p>
                     <footer>
                         <p class="text-right">
